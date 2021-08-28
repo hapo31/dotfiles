@@ -1,3 +1,9 @@
+add_newline = false
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+
 [battery]
 full_symbol = '🔋 '
 charging_symbol = '⚡ '
@@ -5,8 +11,23 @@ discharging_symbol = '🪣 '
 disabled = false
 
 [[battery.display]]
-threshold = 100
+threshold = 0
 style = 'bold yellow'
+
+[git_status]
+modified = "📝:${count} "
+untracked = "✨:${count} "
+renamed = "🔪:${count} "
+ahead = "↑${count} "
+behind = "↓${count} "
+
+[memory_usage]
+threshold = 100
+symbol = ''
+style = "bold dimmed green"
+
+[cmd_duration]
+disabled = true
 
 [status]
 format = '[\[$status $symbol]]($style) '
@@ -17,3 +38,8 @@ disabled = true
 
 [aws]
 disabled = true
+
+[custom.node_installed]
+when = """ test -e package.json && test -d node_modules """
+format = " need install packages(bold red)"
+
