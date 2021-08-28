@@ -1,0 +1,19 @@
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡ '
+discharging_symbol = '🪣 '
+disabled = false
+
+[[battery.display]]
+threshold = 100
+style = 'bold yellow'
+
+[status]
+format = '[\[$status $symbol]]($style) '
+disabled = false
+
+[time]
+disabled = true
+
+[aws]
+disabled = true
