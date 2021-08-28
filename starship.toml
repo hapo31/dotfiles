@@ -40,6 +40,6 @@ disabled = true
 disabled = true
 
 [custom.node_installed]
-when = """ test -e package.json && test -d node_modules """
-format = " need install packages(bold red)"
+when = """ test -e package.json && test ! -d node_modules """
+format = " [ need install packages.](bold red)"
 
