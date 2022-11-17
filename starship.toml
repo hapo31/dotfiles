@@ -29,9 +29,9 @@ style = "bold dimmed green"
 [cmd_duration]
 disabled = true
 
-[status]
-format = '[\[$status $symbol]]($style) '
-disabled = false
+# [status]
+# format = '[\[$status $symbol]]($style) '
+# disabled = false
 
 [time]
 disabled = true
@@ -43,3 +43,5 @@ disabled = true
 when = """ test -e package.json && test ! -d node_modules """
 format = " [ need install packages.](bold red)"
 
+[container]
+disabled = true
